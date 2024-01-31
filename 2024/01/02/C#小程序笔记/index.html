@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>oracle 锁表 | Phoenix-wlc的博客</title>
+  <title>C#小程序笔记 | Phoenix-wlc的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="oracle 锁表">
+  <meta name="description" content="12using Newtonsoft.Json;using Newtonsoft.Json.Linq;  json解析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="oracle 锁表">
-<meta property="og:url" content="http://example.com/2023/12/22/oracle%E9%94%81%E8%A1%A8/index.html">
+<meta property="og:title" content="C#小程序笔记">
+<meta property="og:url" content="http://example.com/2024/01/02/C#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Phoenix-wlc的博客">
-<meta property="og:description" content="oracle 锁表">
+<meta property="og:description" content="12using Newtonsoft.Json;using Newtonsoft.Json.Linq;  json解析">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-22T14:02:11.000Z">
-<meta property="article:modified_time" content="2024-01-02T01:29:57.292Z">
+<meta property="article:published_time" content="2024-01-02T04:07:38.000Z">
+<meta property="article:modified_time" content="2024-01-31T01:10:12.942Z">
 <meta property="article:author" content="phoenix-wlc">
-<meta property="article:tag" content="oracle">
-<meta property="article:tag" content="锁表">
+<meta property="article:tag" content="C#">
 <meta name="twitter:card" content="summary">
   
   
@@ -156,30 +155,29 @@
           <div id="js-content" class="content-ll">
             
 
-<article id="post-oracle锁表" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-C#小程序笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      oracle 锁表
+      C#小程序笔记
     </h1>
   
 
         
-        <a href="/2023/12/22/oracle%E9%94%81%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2023-12-22T14:02:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-12-22</time>
+        <a href="/2024/01/02/C#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2024-01-02T04:07:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-01-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>oracle 锁表</p>
-<span id="more"></span>
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">using Newtonsoft.Json;</span><br><span class="line">using Newtonsoft.Json.Linq;</span><br></pre></td></tr></table></figure>
 
-<p>SELECT l.session_id, s.serial#,s.machine, o.object_name, s.logon_time<br>     , –SYS_CONTEXT(‘USERENV’,’IP_ADDRESS’) as ip<br>     , v.TYPE,t.name,t.DESCRIPTION<br>     , a.SQL_FULLTEXT,<br>     s.*<br>FROM v$locked_object l<br>     , dba_objects o<br>     , v$session s<br>     , v$lock v<br>     , v$lock_type t<br>     , v$sqlarea a<br>WHERE l.object_id = o.object_id<br>  AND l.session_id = s.sid<br>  and l.session_id=v.sid<br>  and v.type=t.type<br>  and s.prev_sql_addr = a.address<br>ORDER BY l.session_id, s.serial# ;</p>
+<p><code>json解析</code></p>
 
       
 
@@ -193,11 +191,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">oracle</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">锁表</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">C#</a>
         		</li>
       		
 		</ul>
@@ -216,18 +210,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2024/01/02/C#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2024/01/30/Oracle%E5%9B%BE%E7%89%87%E8%BD%ACbase64/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          C#小程序笔记
+          Oracle图片转base64
         
       </div>
     </a>
   
   
-    <a href="/2021/12/22/Csharp%E5%86%99%E6%97%A5%E5%BF%97/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">C#写日志</div>
+    <a href="/2023/12/22/oracle%E9%94%81%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">oracle 锁表</div>
       <i class="icon-circle-right"></i>
     </a>
   
